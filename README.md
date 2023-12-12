@@ -1,5 +1,5 @@
 # Ebiz-ITP281
-## [Enterprise Business (ITP281)][ebiz]
+## Enterprise Business (ITP281)
 Partiety is a website selling party items to customer and give recommendation to customer on products knowing their theme of party and the budget they have.
 
 Programming Language: C#, ASP.NET, HTML, CSS
