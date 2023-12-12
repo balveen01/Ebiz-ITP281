@@ -1,0 +1,45 @@
+﻿//Done by Balveen Kaur
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+using System.Data;
+using System.Data.SqlClient;
+using System.Net.Mail;
+using System.Net;
+using System.Configuration;
+
+public partial class PhoneDashboard_User_ : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btn_change_Click(object sender, EventArgs e)
+    {
+        string username = null;
+        username = (string)Session["Username"];
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["PartietyContext"].ConnectionString);
+        conn.Open();
+        SqlCommand cmd = conn.CreateCommand();
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = "Update [User] set phone_number = '" + tb_phoneno.Text + "' where user_id = '" + username + "'";
+        cmd.ExecuteNonQuery();
+        conn.Close();
+        //Response.Write("<script>alert('Updated!');</script>");
+        //Response.Redirect("Dashboard(User).aspx");
+        ScriptManager.RegisterStartupScript(this, this.GetType(),
+                        "alert",
+                        "alert('Updated!');window.location ='Dashboard(User).aspx';",
+                        true);
+    }
+
+    protected void btn_back_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Dashboard(User).aspx");
+    }
+}

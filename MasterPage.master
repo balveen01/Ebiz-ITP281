@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="css/Masterpage.css" />
+    <link href="Master.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .auto-style4 {
+            width: 26px;
+            height: 26px;
+            margin-top: 6px;
+        }
+
+        .auto-style5 {
+            width: 26px;
+            height: 26px;
+            margin-top: 6px;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #ffb3b3;
+        }
+
+        .auto-style7 {
+            width: 100%;
+        }
+
+
+        .mainBody {
+            height: 100px;
+        }
+
+        .footer {
+            /*padding-top: 90%;*/
+            background-color: #ffb3b3;
+            color: #fff;
+        }
+
+            .footer a {
+                color: #fff;
+            }
+
+
+        .auto-style8 {
+            height: 15px;
+            width: 215px;
+        }
+    </style>
+</head>
+<!-- background-color:#ffb3b3;-->
+<body>
+    <form id="form1" runat="server">
+        <div class="jumbotron text-center" style="margin-bottom: 0; background-image: url('/pics/gifcon1.gif');">
+            <h1 style="margin: 0px; white-space: normal; padding: 0px">
+                <meta charset="utf-8" />
+                <b id="docs-internal-guid-4e80368c-7fff-f82f-090f-2bc327294140" style="font-weight: normal;"><span style="font-size: 30pt; font-family: Verdana; color: #ff6666; background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre; white-space: pre-wrap; width=100%">PARTIETY </span>
+                </b></h1>
+        </div>
+
+        <nav class="navbar navbar-expand-sm" style="padding: 0px; width: 38%; left: 20%;">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link w3-bar-item w3-button w3-hover-red" href="Homepage.aspx">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle w3-bar-item w3-button w3-hover-orange" href="#" id="ndbbundle" data-toggle="dropdown">Bundle</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item w3-bar-item w3-button w3-hover-yellow" href="Bundle.aspx">Birthday</a>
+                        <a class="dropdown-item w3-bar-item w3-button w3-hover-green" href="BWedding.aspx">Weddings</a>
+                        <a class="dropdown-item w3-bar-item w3-button w3-hover-blue" href="BShower.aspx">Showers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle w3-bar-item w3-button w3-hover-purple" href="#" id="ndbalacarte" data-toggle="dropdown">Ala Carte</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item w3-bar-item w3-button w3-hover-pink" href="AlaCarte.aspx">Birthday</a>
+                        <a class="dropdown-item w3-bar-item w3-button w3-hover-brown" href="AWedding.aspx">Weddings</a>
+                        <a class="dropdown-item w3-bar-item w3-button w3-hover-grey" href="AShower.aspx">Showers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: black" href="RecommendationQuestion.aspx">Recommendation</a>
+                    </li>
+                    <li>
+                        <img src="pics/1.png" class="auto-style8" />
+                    </li>
+                    <li>
+                        <a class="w3-hover-white" href="#">
+                            <!--<img src="pics/login.png" alt="login" class="auto-style5" />-->
+                            <asp:ImageButton ID="img_login" runat="server" alt="login" class="auto-style5" ImageUrl="~/pics/login.png" OnClick="img_login_Click" CausesValidation="False" />
+
+
+                        </a>
+
+                    </li>
+                    <li>
+                        <a class="w3-hover-white" href="ViewCart.aspx">
+                            <!--<img src="pics/shoppingcart.png" alt="shoppingcart" class="auto-style4" />-->
+                            <asp:ImageButton ID="img_shoppingcart" runat="server" alt="shoppingcart" class="auto-style4" ImageUrl="~/pics/shoppingcart.png" CausesValidation="False" OnClick="img_shoppingcart_Click" />
+
+
+                        </a>
+
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div style="clear: both;" />
+        <!--<div class="w3-sidebar w3-bar-block w3-light-grey" style="width:15%">
+  <a href="#" class="w3-bar-item w3-button w3-hover-red">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-orange">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-yellow">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-green">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-blue">Link 5</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-pink">Link 6</a>
+  <a href="#" class="w3-bar-item w3-button w3-hover-purple">Link 7</a>
+</div> -->
+
+
+        <div class="auto-style7">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="mainBody">
+            <!-- Content here -->
+        </div>
+        <!-- footer -->
+
+        <div style="text-align: center; height: 230px;" class="footer">
+            <div style="width: 50%; float: left; margin-top: 30px;">
+                <asp:Label ID="Label4" runat="server" Text="Follow Us." Font-Size="Medium" Style="font-weight: bold; margin-bottom: 20px"></asp:Label>
+                <br />
+                <asp:ImageButton ID="fb" ImageUrl="pics/fb.png" runat="server" Height="25px" Width="25px" OnClick="fb_Click" />
+                &nbsp;&nbsp;<asp:ImageButton ID="twitter" ImageUrl="pics/twitter.png" runat="server" Height="25px" Width="25px" OnClick="twitter_Click" CausesValidation="False" />
+                &nbsp<asp:ImageButton ID="insta" ImageUrl="pics/insta.png" runat="server" Height="25px" Width="25px" OnClick="insta_Click" CausesValidation="False" />
+                &nbsp;<br />
+                <br />
+                <asp:Label ID="Label3" runat="server" Text="Contact Us." Font-Size="Medium" Style="font-weight: bold; margin-bottom: 20px"></asp:Label>
+                <br />
+                <asp:ImageButton ID="contact" ImageUrl="pics/contact.png" runat="server" Height="25px" Width="25px" OnClick="contact_Click" />
+                &nbsp;+6587494785<br />
+                <asp:ImageButton ID="email" ImageUrl="pics/email.png" runat="server" Height="25px" Width="25px" OnClick="email_Click" CausesValidation="False" />
+                &nbsp;<a href="ContactUs(User).aspx">partietycompany@gmail.com</a><br />
+                <br />
+                <br />
+            </div>
+            <div style="width: 50%; float: left; margin-top: 30px; border-left: 2px solid #fff;">
+
+                <asp:Label ID="Delivery" runat="server" Text="Free Shipping on Orders $150+" Font-Size="Medium" Style="font-weight: bold;"></asp:Label>
+                <br />
+                <asp:LinkButton ID="About" runat="server" OnClick="About_Click" Font-Size="Small" CausesValidation="False">About Partiety</asp:LinkButton><br />
+
+                <asp:LinkButton ID="SR" runat="server" OnClick="SR_Click" Font-Size="Small" CausesValidation="False">Shipping/Returns</asp:LinkButton><br />
+
+                <asp:LinkButton ID="faq" runat="server" OnClick="faq_Click" Font-Size="Small" CausesValidation="False">FAQ</asp:LinkButton><br />
+
+                <asp:LinkButton ID="feedback" runat="server" OnClick="feedback_Click" Font-Size="Small" CausesValidation="False">Feedback</asp:LinkButton><br />
+
+
+            </div>
+
+        </div>
+
+
+
+    </form>
+</body>
+</html>
